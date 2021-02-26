@@ -17,3 +17,12 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+
+## Up postgres container
+
+1. `docker run --name postgress -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres`
+
+**If doesn't work:**
+2. `docker rm <id>`
+3. ```sudo kill -9 `sudo lsof -t -i:5432` ```
+4. `docker run --name postgress -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres`
