@@ -23,18 +23,18 @@ defmodule RocketpayWeb.AccountsView do
       from_account: from_account,
     }
   }) do
-%{
-  message: "Transaction done successfully",
-  transaction: %{
-    from_account: %{
-      id: from_account.id,
-      balance: from_account.balance
-    },
-    to_account: %{
-      id: to_account.id,
-      balance: to_account.balance
+  %{
+    message: "Transaction done successfully",
+    transaction: %{
+      from_account: %{
+        id: from_account.id,
+        balance: from_account.balance
+      },
+      to_account: %{
+        id: to_account.id,
+        balance: to_account.balance
+      }
     }
   }
-}
-end
+  end
 end
